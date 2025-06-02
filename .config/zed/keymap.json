@@ -1,0 +1,36 @@
+// zed keymap
+//
+// for information on binding keys, see the zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// to see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle",
+      "ctrl-m ctrl-a": ["task::Spawn", { "task_name": "Make"}],
+      "ctrl-c ctrl-b": ["task::Spawn", { "task_name": "Cargo build" }],
+      "ctrl-c ctrl-r": ["task::Spawn", { "task_name": "Cargo run" }],
+      "ctrl-c ctrl-t": ["task::Spawn", { "task_name": "Cargo test" }],
+      "ctrl-c ctrl-c": ["task::Spawn", { "task_name": "Cargo clippy" }],
+      "ctrl-c ctrl-f": ["task::Spawn", { "task_name": "Cargo fmt" }],
+      "ctrl-g ctrl-b": ["task::Spawn", { "task_name": "Gradle build"}],
+      "ctrl-g ctrl-r": ["task::Spawn", { "task_name": "Gradle run"}],
+      "ctrl-g ctrl-t": ["task::Spawn", { "task_name": "Gradle test"}],
+      "ctrl-g ctrl-i ctrl-t": ["task::Spawn", { "task_name": "lazygit"}]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-d": ["editor::SendKeystrokes", "ctrl-d zz"],
+      "ctrl-u": ["editor::SendKeystrokes", "ctrl-u zz"],
+      "cmd-space": "editor::ShowCompletions",
+      "ctrl-shift-up": "vim::MoveToPrev",
+      "ctrl-shift-down": "vim::MoveToNext",
+      "ctrl-shift-c": "editor::ToggleCodeActions",
+    }
+  }
+]
