@@ -1,0 +1,3 @@
+return {
+  'qbbr/vim-symfony'
+}
